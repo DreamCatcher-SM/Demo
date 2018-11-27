@@ -57,8 +57,9 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContentFragment.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\menu\Tab1.cs" />
+    <Compile Include="Resources\menu\Tab2.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -70,9 +71,6 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\activity_main.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\values\dimens.xml" />
     <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
@@ -100,9 +98,6 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Refractored.PagerSlidingTabStrip">
-      <Version>1.1.6</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Android.Support.v4">
       <Version>27.0.2.1</Version>
@@ -112,20 +107,17 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Fragment.axml">
+    <AndroidResource Include="Resources\layout\Tab1.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\menu\" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\AndroidLayout.axml">
+    <AndroidResource Include="Resources\layout\Tab2.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Ioslayout.axml">
+    <AndroidResource Include="Resources\layout\MainLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
