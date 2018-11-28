@@ -27,7 +27,7 @@ namespace App22.Resources.menu
             // Use this to return your custom view for this Fragment
              return inflater.Inflate(Resource.Layout.Tab2, container, false);
 
-            return base.OnCreateView(inflater, container, savedInstanceState);
+            //return base.OnCreateView(inflater, container, savedInstanceState);
         }
     }
 }
