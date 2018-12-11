@@ -24,10 +24,20 @@ namespace App22.Resources.menu
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
+            var view = inflater.Inflate(Resource.Layout.Tab2, container, false);
+            Button button =view.FindViewById<Button>(Resource.Id.button1);
+            button.Click += Button_Click;
+
+
             // Use this to return your custom view for this Fragment
-             return inflater.Inflate(Resource.Layout.Tab2, container, false);
+            return view;
 
             //return base.OnCreateView(inflater, container, savedInstanceState);
         }
+        private void Button_Click(object sender, System.EventArgs e)
+        {
+            Application.Context.StartActivity(typeof(Activity1));
+        }
+
     }
 }
