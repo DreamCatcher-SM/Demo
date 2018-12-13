@@ -2480,8 +2480,8 @@ namespace App22
 			// aapt resource value: 0x7f080039
 			public const int collapseActionView = 2131230777;
 			
-			// aapt resource value: 0x7f08009b
-			public const int collapsing_toolbar = 2131230875;
+			// aapt resource value: 0x7f08009a
+			public const int collapsing_toolbar = 2131230874;
 			
 			// aapt resource value: 0x7f08008d
 			public const int container = 2131230861;
@@ -2615,11 +2615,11 @@ namespace App22
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f08009a
-			public const int main_appbar = 2131230874;
+			// aapt resource value: 0x7f080099
+			public const int main_appbar = 2131230873;
 			
-			// aapt resource value: 0x7f08009c
-			public const int main_backdrop = 2131230876;
+			// aapt resource value: 0x7f08009b
+			public const int main_backdrop = 2131230875;
 			
 			// aapt resource value: 0x7f0800b8
 			public const int masked = 2131230904;
@@ -2645,8 +2645,8 @@ namespace App22
 			// aapt resource value: 0x7f0800b5
 			public const int mySecToolbar = 2131230901;
 			
-			// aapt resource value: 0x7f08009d
-			public const int my_toolbar = 2131230877;
+			// aapt resource value: 0x7f08009c
+			public const int my_toolbar = 2131230876;
 			
 			// aapt resource value: 0x7f080093
 			public const int navigation_header_container = 2131230867;
@@ -2669,8 +2669,8 @@ namespace App22
 			// aapt resource value: 0x7f0800a8
 			public const int notification_main_column_container = 2131230888;
 			
-			// aapt resource value: 0x7f080099
-			public const int pagerx = 2131230873;
+			// aapt resource value: 0x7f08009e
+			public const int pagerx = 2131230878;
 			
 			// aapt resource value: 0x7f08004c
 			public const int parallax = 2131230796;
@@ -2816,8 +2816,8 @@ namespace App22
 			// aapt resource value: 0x7f08001f
 			public const int tabMode = 2131230751;
 			
-			// aapt resource value: 0x7f08009e
-			public const int tablayout = 2131230878;
+			// aapt resource value: 0x7f08009d
+			public const int tablayout = 2131230877;
 			
 			// aapt resource value: 0x7f080019
 			public const int tag_transition_group = 2131230745;

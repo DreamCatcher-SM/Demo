@@ -26,9 +26,12 @@ namespace App22.Resources.menu
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
+
+
+            try
+            {
+
             
-
-
             // Use this to return your custom view for this Fragment
             View view =  inflater.Inflate(Resource.Layout.Tab1, container, false);
             ListView listView = view.FindViewById<ListView>(Resource.Id.listView);
@@ -45,7 +48,13 @@ namespace App22.Resources.menu
 
 
             return view;
-            //return base.OnCreateView(inflater, container, savedInstanceState);
+            }
+            catch (Exception ex)
+            {
+
+                string a = ex.Message;
+                return base.OnCreateView(inflater, container, savedInstanceState);
+            }
         }
 
 
