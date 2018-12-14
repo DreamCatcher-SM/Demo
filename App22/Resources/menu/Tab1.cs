@@ -21,7 +21,7 @@ namespace App22.Resources.menu
 
             // Create your fragment here
 
-            
+
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -31,15 +31,21 @@ namespace App22.Resources.menu
             try
             {
 
-            
-            // Use this to return your custom view for this Fragment
-            View view =  inflater.Inflate(Resource.Layout.Tab1, container, false);
-            ListView listView = view.FindViewById<ListView>(Resource.Id.listView);
-            ArrayAdapter<string> ListAdapter = new ArrayAdapter<string>(listView.Context,Resource.Layout.list_item, countries);
 
-            listView.TextFilterEnabled = true;
-            listView.Adapter = ListAdapter;
-            listView.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs args)
+                // Use this to return your custom view for this Fragment
+                View view = inflater.Inflate(Resource.Layout.Tab1, container, false);
+                ListView listView = view.FindViewById<ListView>(Resource.Id.listView);
+
+
+
+
+                ArrayAdapter<string> ListAdapter = new ArrayAdapter<string>(listView.Context, Resource.Layout.list_item, countries);
+
+                listView.TextFilterEnabled = true;
+                listView.Adapter = ListAdapter;
+                setListViewHeightBasedOnChildren(listView); // key code
+
+                listView.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs args)
             {
                 Toast.MakeText(Application.Context, ((TextView)args.View).Text, ToastLength.Short).Show();
             };
@@ -47,7 +53,7 @@ namespace App22.Resources.menu
 
 
 
-            return view;
+                return view;
             }
             catch (Exception ex)
             {
@@ -57,7 +63,38 @@ namespace App22.Resources.menu
             }
         }
 
+        public void setListViewHeightBasedOnChildren(ListView listView)
+        {
+            try
+            {
+                ArrayAdapter listAdapter = (ArrayAdapter)listView.Adapter;
+                if (listAdapter == null)
+                {
+                    // pre-condition
+                    return;
+                }
 
+                int totalHeight = 0;
+                for (int i = 0; i < listAdapter.Count; i++)
+                {
+                    View listItem = listAdapter.GetView(i, null, listView);
+                    listItem.Measure(0, 0);
+                    totalHeight += listItem.MeasuredHeight;
+                }
+
+                ViewGroup.LayoutParams _params = listView.LayoutParameters;
+
+                _params.Height = totalHeight + (listView.DividerHeight * (listAdapter.Count - 1));
+                if (_params.Height < 250)//to have min height
+                    _params.Height = 250;//to have min height
+                listView.LayoutParameters = _params;
+                listView.RequestLayout();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
         static readonly string[] countries = new String[] {
     "Afghanistan","Albania","Algeria","American Samoa","Andorra",
     "Angola","Anguilla","Antarctica","Antigua and Barbuda","Argentina",

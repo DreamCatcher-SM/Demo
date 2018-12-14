@@ -80,15 +80,13 @@
 	</android.support.design.widget.AppBarLayout>
 
 	
-	<LinearLayout
-		android:layout_height="match_parent"
-		android:layout_width="match_parent">
-<android.support.v4.view.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-			app:layout_behavior="@string/appbar_scrolling_view_behavior"
-		android:id="@+id/pagerx"/>
-			</LinearLayout>
+      <android.support.v4.view.ViewPager
+         android:layout_width="match_parent"
+         android:layout_height="fill_parent"
+     app:layout_behavior="@string/appbar_scrolling_view_behavior"
+         android:id="@+id/pagerx"/>
+
+
  	<android.support.design.widget.FloatingActionButton
 		android:id="@+id/fab"
 		android:layout_width="wrap_content"
